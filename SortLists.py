@@ -1,7 +1,8 @@
+import copy
 def Sort(SourceLists,ReferenceList,Reverse = False):
     #Sorts a list of lists -> SourceLists, based on a reference list
-    SourceLists = SourceLists[:]     #Makes a copy of both lists
-    ReferenceList = ReferenceList[:]
+    SourceLists = copy.deepcopy(SourceLists)    #Makes a copy of both lists
+    ReferenceList = copy.deepcopy(ReferenceList)
     
     for List in SourceLists: #Checks each list, if not the same length as the reference list : will raise error
         if len(List) != len(ReferenceList):
